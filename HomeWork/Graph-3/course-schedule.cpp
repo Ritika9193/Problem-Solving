@@ -1,4 +1,7 @@
-vector<int>adj[numCourses];
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+        vector<int>adj[numCourses];
         for(auto it : prerequisites){
             adj[it[0]].push_back(it[1]);
         }
@@ -30,3 +33,5 @@ vector<int>adj[numCourses];
             return true;
         }
         return false;
+    }
+};
